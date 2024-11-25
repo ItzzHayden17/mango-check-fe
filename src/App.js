@@ -9,9 +9,12 @@ function App() {
   const [batch,setBatch] = useState(" ")
   function handleChange(e){
     const file = e.target.files
+    setBatch(" ")
+    setIsLegit(" ")
     if (file.length === 0) {
       
     }else if (file.length === 1) {
+
       const formData = new FormData()
       formData.append("pdfFile",file[0])
   
